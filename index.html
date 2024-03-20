@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Files/style.css">
+    <script>
+        function check() {
+            username = document.getElementById('username').value;
+            password = document.getElementById('password').value;
+            if (username == "admin" && password == "Admin123") {
+                document.getElementById("text").style.color = "green";
+                document.getElementById("text").textContent = "Connected to root";
+            }
+            else {
+                document.getElementById("text").style.color = "red";
+                document.getElementById("text").textContent = "Connect faild";
+            }
+        }
+    </script>
+    <title>Fake login page.</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400&display=swap');
+        body {
+            font-family: 'Orbitron', sans-serif !important;
+            margin: 0px;
+        }
+        .form {
+            width: 100%;
+            max-height: 350px;
+        }
+        .in {
+            width: 35%;
+            height: 350px;
+            box-shadow: 25px, 25px 25px red;
+            background-color: rgb(230, 230, 230);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 25px;
+            padding: 15px;
+            gap: 25px;
+        }
+        input {
+            width: 350px;
+            border-radius: 50px;
+            height: 15px;
+            border-color: transparent;
+            padding: 5px;
+        }
+        button {
+            padding: 15px;
+            border-color: transparent;
+            background-color: rgb(230, 230, 230);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>
+            Hello, This is a fake login page for learn 
+            <br>
+            <b>hydra, selenium</b>, ... to hack an account.
+        </h1>
+        <h3>
+            The admin username is: admin
+            <br>
+            the admin password is: Admin123
+        </h3>
+        <div class="form">
+            <div class="in">
+                <h2>Username:</h2>
+                <input type="text" id="username" placeholder="Username" />
+                <h2>Password:</h2>
+                <input type="text" id="password" placeholder="Password" />
+                <button onclick="check()">Submit</button>
+                <p id="text"></p>
+            </div>
+        </div>
+    </center>
+</body>
+</html>
